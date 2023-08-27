@@ -1,12 +1,19 @@
+class Student {
+    int num;
+    String name;
+}
+
 public class App {
     public static void main(String[] args) throws Exception {
-        int nums[][] = new int[3][4];
-        for(int n[]:nums) {
-            for(int m:n) {
-                m =(int)(Math.random()*100);
-                System.out.print(m+ " ");
-            }
-            System.out.println();
+        Student[] students = new Student[3];
+        for(int i=0; i< students.length; i++) {
+            students[i] = new Student();
+            students[i].name = "student "+(i+1);
+            students[i].num = (int)(Math.random()+i);
+        }
+
+        for (Student student:students) {
+            System.out.println("Student name: "+student.name+" , num: "+student.num);
         }
     }
 }
