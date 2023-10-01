@@ -1,7 +1,8 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        String value = "Hello World!";
-
-        System.out.println(value);
+        Dog d = new Dog();
+        System.out.println(d.print());
+        Cat c = new Cat();
+        System.out.println(c.print());
     }
 }
