@@ -1,7 +1,11 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        String value = "Hello World!";
+        GenericClass<Integer> intClass = new GenericClass<Integer>(5);
+        System.out.println(intClass.data());
+        intClass.show();
 
-        System.out.println(value);
+        GenericClass<String> strClass = new GenericClass<String>("hello");
+        System.out.println(strClass.data());
+        strClass.show();
     }
 }
